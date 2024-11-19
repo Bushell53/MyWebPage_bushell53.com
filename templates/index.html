@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracket Count Difference</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2 class="title">Enter your string</h2>
+    <!-- Form to submit the data to Flask -->
+    <form action="/calculate" method="post">
+        <textarea name="inputString" class="input-area" rows="6" cols="50" placeholder="Paste your string here..."></textarea>
+        <br>
+        <button type="submit" name="action" value="difference" class="submit-button">Calculate Bracket Difference</button>
+        <button type="submit" name="action" value="count" class="submit-button">Count Total Parentheses</button>
+        <button type="submit" name="action" value="Problem3" class="submit-button">Problem3</button>
+        <button type="submit" name="action" value="Problem4" class="submit-button">Problem4</button>
+    </form>
+    <h2 class="title">Result</h2>
+    <p id="outputResult" class="result-text">{{result}}</p>
+</body>
+</html>
