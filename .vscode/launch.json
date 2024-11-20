@@ -1,10 +1,10 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
+
         {
             "name": "Python: Flask",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "flask",
             "env": {

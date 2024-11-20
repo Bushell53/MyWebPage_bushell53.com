@@ -8,3 +8,7 @@ __pycache__/
 
 # Ignore environment files
 .env
+
+#Ignore vs code file
+.vscode
+

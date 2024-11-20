@@ -11,7 +11,7 @@ def calculate():
     input_string = request.form['inputString']
     action = request.form['action']  # Check which button was clicked
 
-    if action == "difference":
+    if action == "2015_P1":
         # Perform the bracket difference calculation
         open_count = 0
         close_count = 0
@@ -26,12 +26,12 @@ def calculate():
         else:
             result = f"Difference: {open_count - close_count} (Open - Close)"
 
-    elif action == "count":
+    elif action == "2015_P2.1":
         # Perform a simple count of all parentheses
         total_count = input_string.count('(') + input_string.count(')')
         result = f"Total parentheses count: {total_count}"
 
-    elif action == "Problem3":
+    elif action == "2015_P2.2":
         # Split the input into lines
         lines = input_string.strip().splitlines()
         total_surface_area = 0
@@ -63,7 +63,7 @@ def calculate():
         # Set the result to the total calculated surface area
         result = f"Total Surface Area: {total_surface_area}"
         
-    elif action == "Problem4":
+    elif action == "2015_P3.1":
 
         updown = 0
         leftright = 0
@@ -81,13 +81,17 @@ def calculate():
             elif char == '<':
                 leftright -= 1
 
-        if (updown, leftright) not in positions:
-            positions.append ((updown, leftright)) 
+            if (updown, leftright) not in positions:
+               positions.append ((updown, leftright)) 
 
         numberOfHouses = len(positions)
         result = f"Number of houses: {numberOfHouses}"
 
-    return result  # Always return a string
+    else:
+        # Default case if the action is unrecognized
+        result = "Invalid action or input."
+
+    return result  # Always return a string result
  
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
