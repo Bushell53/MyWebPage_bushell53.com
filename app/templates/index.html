@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Flask App</h1>
+    <form action="/calculate" method="post">
+        <textarea name="inputString" rows="5" cols="50" placeholder="Enter your input here"></textarea>
+        <div class="button-grid">
+            <button type="submit" name="action" value="2015_P1.1">2015 P1.1</button>
+            <button type="submit" name="action" value="2015_P1.2">2015 P1.2</button>
+            <button type="submit" name="action" value="2015_P2.1">2015 P2.1</button>
+            <button type="submit" name="action" value="2015_P2.2">2015 P2.2</button>
+            <button type="submit" name="action" value="2015_P3.1">2015 P3.1</button>
+            <button type="submit" name="action" value="2015_P3.2">2015 P3.2</button>
+            <!-- Add more buttons here -->
+        </div>
+    </form>
+</body>
+</html>

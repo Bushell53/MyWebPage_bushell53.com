@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+textarea {
+    margin: 20px 0;
+    width: 50%; /* Make the textarea wider for better appearance */
+    height: 100px; /* Adjust height */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+    gap: 15px; /* Add spacing between buttons */
+    justify-content: center; /* Center the grid */
+    max-width: 600px; /* Limit the width of the button grid */
+    margin: 20px auto; /* Center the grid horizontally */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    max-width: 250px; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
