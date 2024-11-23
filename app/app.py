@@ -32,6 +32,10 @@ def calculate():
         result = y2015_p3_1.calculate(input_string)
     elif action == "2015_P3.2":
         result = y2015_p3_2.calculate(input_string)
+    elif action == "2015_P4.1":
+        result = y2015_p4_1.calculate(input_string)
+    elif action == "2015_P4.2":
+        result = y2015_p4_2.calculate(input_string)
     else:
         result = "Invalid action or input."
 
