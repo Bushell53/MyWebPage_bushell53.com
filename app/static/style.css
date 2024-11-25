@@ -1,19 +1,29 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: #eaeaea; /* Light gray background */
+    color: #2b2b2b; /* Dark gray text */
 }
 
 h1 {
-    color: #333;
+    color: #2b2b2b; /* Dark gray */
 }
 
+/* Textarea Styles */
 textarea {
     margin: 20px 0;
-    width: 50%; /* Make the textarea wider for better appearance */
+    width: 50%; /* Wider textarea for better usability */
     height: 100px; /* Adjust height */
+    border: 1px solid #cccccc; /* Light border */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px;
+    background-color: #f9f9f9; /* Slightly lighter gray */
+    color: #2b2b2b; /* Dark gray text */
 }
 
+/* Button Grid Styles */
 .button-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
@@ -23,18 +33,62 @@ textarea {
     margin: 20px auto; /* Center the grid horizontally */
 }
 
+/* Button Styles */
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: #4682B4; /* Light blue */
     color: white;
     border: none;
-    max-width: 250px; 
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for effects */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #27496d; /* Deep dark blue on hover */
 }
 
+/* Loading Animation */
+.loading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4682B4; /* Match button color */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading span {
+    display: inline-block;
+    margin-left: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: #4682B4;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+.loading span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes blink {
+    0%, 20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
