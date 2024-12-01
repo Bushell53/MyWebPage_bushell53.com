@@ -22,12 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             try {
-                const response = await fetch("/calculate", {
-                    method: "POST",
+                const response = await fetch('/aoc2015_solve', {
+                    method: 'POST',
                     headers: {
-                        "Content-Type": "application/json",
+                        'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ inputString: input, action: action }),
+                    body: JSON.stringify({
+                        inputString: input,
+                        action: action
+                    })
                 });
 
                 if (!response.ok) throw new Error("Failed to fetch result from server.");
